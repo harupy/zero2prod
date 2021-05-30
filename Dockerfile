@@ -3,5 +3,5 @@ FROM rust:1.49
 WORKDIR app
 COPY . .
 ENV SQLX_OFFLINE true
-RUN cargo build
+RUN cargo build --release
 ENTRYPOINT ["./target/release/zero2prod"]
